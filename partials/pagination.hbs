@@ -1,0 +1,13 @@
+<nav class="pagination" role="pagination">
+
+  <span class="page-number">{{page}}ページ／{{pages}}ページ</span>
+
+  <ul>
+    {{#if prev}}
+      <li class="prev"><a href="{{page_url prev}}">新しい記事へ</a></li>
+    {{/if}}
+    {{#if next}}
+      <li class="next"><a href="{{page_url next}}">古い記事へ</a></li>
+    {{/if}}
+  </ul>
+</nav>

@@ -1,0 +1,57 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
+
+  {{! Everything inside the #post tags pulls data from the post }}
+  {{#post}}
+
+    <article class="{{post_class}}">
+      <header class="post-header">
+        <h2>{{title}}</h2>
+        <p class="post-meta">
+          <time datetime="{{date format='YYYY-MM-DD'}}">Posted on {{date format="MMMM DD, YYYY"}}</time> <br>
+          {{tags prefix="in "}}
+        </p>
+        {{#if image}}
+          <section class="featured-image">
+            <img src="{{image}}" alt="{{title}}">
+          </section>
+        {{/if}}
+      </header>
+
+      <section class="post-content">
+        {{content}}
+      </section>
+    </article>
+
+    <section class="read-next-story">
+      <div class="row">
+
+        <div class="column">
+          {{#next_post}}
+            <div class="next">
+              <p>次の記事</p>
+              <h3><a href="{{url}}">{{title}}</a></h3>
+            </div>
+          {{/next_post}}
+        </div>
+
+        <div class="column">
+          {{#prev_post}}
+            <div class="prev">
+              <p>前の記事</p>
+              <h3><a href="{{url}}">{{title}}</a></h3>
+            </div>
+          {{/prev_post}}
+        </div>
+
+      </div>
+    </section>
+
+    {{> widget-share}}
+
+
+  {{/post}}
+
+</main>
