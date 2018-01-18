@@ -1,4 +1,36 @@
 {
-  "name": "Starter",
-  "version": "1.0.0"
+  "name": "@uncovertruth/fuji",
+  "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/uncovertruth/fuji/issues"
+  },
+  "devDependencies": {
+    "@uncovertruth/stylelint-config": "^0.8.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.10.2",
+    "stylelint": "^8.4.0"
+  },
+  "homepage": "https://github.com/uncovertruth/fuji#readme",
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{css,scss,md}": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/uncovertruth/fuji.git"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "stylelint \"assets/**/*.css assets/**/*.scss\""
+  }
 }
