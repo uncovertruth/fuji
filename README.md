@@ -1,17 +1,20 @@
 # fuji
 
-[![Build Status](https://travis-ci.org/uncovertruth/fuji.svg?branch=master)](https://travis-ci.org/uncovertruth/fuji)
+[![Build Status](https://travis-ci.org/uncovertruth/fuji.svg?branch=master)](;https://travis-ci.org/uncovertruth/fuji)
+[![code style: prettier](;https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](;https://github.com/prettier/prettier)
 
 > ghost theme
 
 ## Install
 
-    docker pull ghost
+docker pull ghost
 
 ## Usage
 
-    docker run --rm -d --name local -p 3001:2368 -v `pwd`:/var/lib/ghost/content/themes/fuji ghost
-    > open localhost:3001
+npm run build
+docker run -d --name local -p 3001:2368 -v `pwd`/dist:/var/lib/ghost/content/themes/fuji ghost
+
+> open localhost:3001
 
 ## Contribute
 
