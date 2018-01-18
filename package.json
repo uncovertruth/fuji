@@ -25,6 +25,7 @@
   "lint-staged": {
     "*.{css,scss,md}": [
       "prettier --write",
+      "stylelint --fix",
       "git add"
     ]
   },
