@@ -22,9 +22,13 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.{css,scss,md}": [
+    "*.{css,scss}": [
       "prettier --write",
       "stylelint --fix",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
       "git add"
     ]
   },
