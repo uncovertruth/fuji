@@ -4,7 +4,6 @@
   "bugs": {
     "url": "https://github.com/uncovertruth/fuji/issues"
   },
-  "private": true,
   "devDependencies": {
     "@uncovertruth/stylelint-config": "^0.8.0",
     "cpx": "^1.5.0",
@@ -30,6 +29,7 @@
     ]
   },
   "main": "index.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/uncovertruth/fuji.git"
@@ -39,6 +39,7 @@
     "build": "run-s clean assets build:*",
     "build:style": "node-sass src/assets/css/sass/screen.sass dist/assets/css/screen.css",
     "clean": "rimraf dist",
+    "lint": "stylelint 'src/**/*.scss'",
     "precommit": "lint-staged",
     "prestart": "npm run build",
     "start": "concurrently --kill-others 'npm run assets -- -w'",
