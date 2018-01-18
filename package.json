@@ -41,7 +41,7 @@
   "scripts": {
     "assets": "cpx 'src/**/*.{hbs,json,eof,svg,ttf,woff}' dist",
     "build": "run-s clean assets build:*",
-    "build:style": "node-sass src/assets/css/sass/screen.sass dist/assets/css/screen.css",
+    "build:style": "node-sass src/scss/screen.scss dist/assets/css/screen.css",
     "clean": "rimraf dist",
     "lint": "stylelint 'src/**/*.scss'",
     "precommit": "lint-staged",
