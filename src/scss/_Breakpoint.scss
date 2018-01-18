@@ -1,0 +1,23 @@
+// Breakpoint
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$small: 480px !default;
+$medium: 800px !default;
+
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: $medium) {
+    @content;
+  }
+}

@@ -6,9 +6,13 @@
   },
   "devDependencies": {
     "@uncovertruth/stylelint-config": "^0.8.0",
+    "cpx": "^1.5.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
     "prettier": "^1.10.2",
+    "rimraf": "^2.6.2",
     "stylelint": "^8.4.0"
   },
   "homepage": "https://github.com/uncovertruth/fuji#readme",
@@ -25,12 +29,20 @@
     ]
   },
   "main": "index.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/uncovertruth/fuji.git"
   },
   "scripts": {
+    "assets": "cpx 'src/**/*.{hbs,json,eof,svg,ttf,woff}' dist",
+    "build": "run-s clean assets build:*",
+    "build:style": "node-sass src/assets/css/sass/screen.sass dist/assets/css/screen.css",
+    "clean": "rimraf dist",
+    "lint": "stylelint 'src/**/*.scss'",
     "precommit": "lint-staged",
-    "test": "stylelint \"assets/**/*.css assets/**/*.scss\""
+    "prestart": "npm run build",
+    "start": "concurrently --kill-others 'npm run assets -- -w'",
+    "test": "npm run build"
   }
 }

@@ -1,0 +1,11 @@
+// Scroll top
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.scroll-top {
+  display: block;
+  margin-bottom: 2rem;
+
+  @include medium {
+    float: right;
+  }
+}
