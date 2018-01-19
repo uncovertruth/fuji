@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@uncovertruth/stylelint-config": "^0.8.0",
+    "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
@@ -41,12 +42,12 @@
   "scripts": {
     "assets": "cpx 'src/**/*.{hbs,json,eof,svg,ttf,woff}' dist",
     "build": "run-s clean assets build:*",
-    "build:style": "node-sass src/scss/screen.scss dist/assets/css/screen.css",
+    "build:style": "node-sass src/scss/screen.scss dist/assets/css/screen.css --output-style compressed",
     "clean": "rimraf dist",
     "lint": "stylelint 'src/**/*.scss'",
     "precommit": "lint-staged",
     "prestart": "npm run build",
-    "start": "concurrently --kill-others 'npm run assets -- -w'",
+    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build:style -- -w'",
     "test": "npm run build"
   }
 }
