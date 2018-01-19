@@ -14,7 +14,7 @@ docker pull ghost
 ## Usage
 
 ```sh
-npm start &
+npm start
 docker run -d -p 3001:2368 -v `pwd`/dist:/var/lib/ghost/content/themes/fuji ghost
 
 > open localhost:3001
@@ -23,7 +23,7 @@ docker run -d -p 3001:2368 -v `pwd`/dist:/var/lib/ghost/content/themes/fuji ghos
 ### Deploy
 
 ```sh
-npm run Build
+npm run build
 zip -r fuji.zip dist
 ```
 
