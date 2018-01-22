@@ -9,7 +9,7 @@
     "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
+    "lint-staged": "^6.0.1",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.10.2",
