@@ -1,19 +1,27 @@
 {
   "name": "@uncovertruth/fuji",
-  "version": "0.0.0",
+  "description": "Simple Ghost theme",
+  "version": "0.0.1",
+  "author": "UNCOVER TRUTH Inc.",
   "bugs": {
     "url": "https://github.com/uncovertruth/fuji/issues"
+  },
+  "dependencies": {
+    "basscss": "^8.0.3"
   },
   "devDependencies": {
     "@uncovertruth/stylelint-config": "^0.8.0",
     "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
+    "cssnano": "^3.10.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
+    "postcss-banner": "^3.0.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-import": "^11.0.0",
     "prettier": "^1.10.2",
-    "rimraf": "^2.6.2",
     "stylelint": "^8.4.0"
   },
   "homepage": "https://github.com/uncovertruth/fuji#readme",
@@ -28,7 +36,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.md": [
+    "*.{js,md}": [
       "prettier --write",
       "git add"
     ]
@@ -40,14 +48,15 @@
     "url": "git+ssh://git@github.com/uncovertruth/fuji.git"
   },
   "scripts": {
-    "assets": "cpx 'src/**/*.{hbs,json,eof,svg,ttf,woff}' dist",
-    "build": "run-s clean assets build:*",
-    "build:style": "node-sass src/scss/screen.scss dist/assets/css/screen.css --output-style compressed",
-    "clean": "rimraf dist",
-    "lint": "stylelint 'src/**/*.scss'",
+    "assets": "cpx 'src/**/*.{css,hbs,eof,svg,ttf,woff}' dist",
+    "assets:package": "cpx package.json dist/.",
+    "build": "run-s assets assets:package build:scss build:css",
+    "build:css": "postcss src/assets/style.css -o dist/assets/style.min.css",
+    "build:scss": "node-sass src/scss/screen.scss src/assets/screen.css --output-style compressed",
+    "lint": "stylelint 'src/**/*.{css,scss}'",
     "precommit": "lint-staged",
     "prestart": "npm run build",
-    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build:style -- -w'",
+    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build:scss -- -w' 'npm run build:css -- -w'",
     "test": "npm run build"
   }
 }
