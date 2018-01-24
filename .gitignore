@@ -1,7 +1,8 @@
 *.zip
+*.js
+*.css
 package-lock.json
 dist
-*.js
 
 # Logs
 logs
