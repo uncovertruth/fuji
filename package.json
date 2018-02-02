@@ -10,19 +10,32 @@
     "basscss": "^8.0.3"
   },
   "devDependencies": {
+    "@types/extract-text-webpack-plugin": "^3.0.0",
+    "@types/node": "^9.4.0",
+    "@types/webpack": "^3.8.4",
+    "@uncovertruth/eslint-config": "^3.3.0",
     "@uncovertruth/stylelint-config": "^0.8.0",
+    "@uncovertruth/tslint-config": "^1.3.0",
     "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
-    "cssnano": "^3.10.0",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
-    "postcss-banner": "^3.0.0",
-    "postcss-cli": "^4.1.1",
-    "postcss-import": "^11.0.0",
-    "prettier": "^1.10.2",
-    "stylelint": "^8.4.0"
+    "prettier-eslint-cli": "^4.7.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "stylelint": "^8.4.0",
+    "ts-loader": "^3.4.0",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1",
+    "typescript-eslint-parser": "^12.0.0",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0"
   },
   "homepage": "https://github.com/uncovertruth/fuji#readme",
   "keywords": [
@@ -36,8 +49,13 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.{js,md}": [
+    "*.md": [
       "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "prettier-eslint --write",
+      "tslint --fix",
       "git add"
     ]
   },
@@ -50,13 +68,14 @@
   "scripts": {
     "assets": "cpx 'src/**/*.{css,hbs,eof,svg,ttf,woff}' dist",
     "assets:package": "cpx package.json dist/.",
-    "build": "run-s assets assets:package build:scss build:css",
-    "build:css": "postcss src/assets/style.css -o dist/assets/style.min.css",
-    "build:scss": "node-sass src/scss/screen.scss src/assets/screen.css --output-style compressed",
-    "lint": "stylelint 'src/**/*.{css,scss}'",
+    "build": "run-s assets assets:package webpack",
+    "lint": "run-p lint:*",
+    "lint:css": "stylelint 'src/**/*.{css,scss}'",
+    "lint:ts": "tslint '{src,test}/*.ts'",
     "precommit": "lint-staged",
     "prestart": "npm run build",
-    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build:scss -- -w' 'npm run build:css -- -w'",
-    "test": "npm run build"
+    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build -- -w'",
+    "test": "npm run build",
+    "webpack": "webpack"
   }
 }
