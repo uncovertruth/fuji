@@ -21,7 +21,7 @@ $color-rss: #f26522;
 
 // @import "Base";
 @import "Breakpoint";
-// @import "Utility";
+@import "Utility";
 // @import "Blockquote";
 // @import "Code";
 // @import "Footer";
@@ -31,7 +31,7 @@ $color-rss: #f26522;
 // @import "Link";
 // @import "List";
 // @import "Misc";
-// @import "Navigation";
+@import "Navigation";
 // @import "Pagination";
 // @import "Scroll";
 // @import "Share";

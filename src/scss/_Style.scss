@@ -8,7 +8,8 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", sans-serif;
   line-height: 1;
   color: #333;
   height: 100%;
@@ -102,26 +103,6 @@ p + p {
     width: 18.75rem;
     margin: 0.625rem 0;
   }
-
-  nav {
-    flex: 1;
-    margin: 0.625rem 0;
-
-    .navigation-toggle-container {
-      display: none;
-    }
-
-    ul {
-      display: flex;
-      justify-content: flex-end;
-
-      li {
-        + li {
-          margin-left: 4rem;
-        }
-      }
-    }
-  }
 }
 
 .site-footer {
@@ -146,50 +127,6 @@ p + p {
       opacity: 0.97;
       visibility: hidden;
       transition: opacity 3500ms, visibility 3500ms, width 3500ms;
-    }
-
-    nav {
-      .navigation-toggle-container {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        z-index: 5;
-        text-align: center;
-        cursor: pointer;
-        background-color: hsla(0, 0%, 100%, 0.97);
-        border-bottom: 0.063rem solid #e9ebed;
-        transition: background-color 2500ms ease;
-
-        .navigation-toggle {
-          line-height: 2.5rem;
-
-          &::after {
-            content: "MENU";
-            font-size: 0.8rem;
-            transition: all 2500ms ease;
-          }
-        }
-
-        .toggle-icon {
-          display: inline-block;
-          margin-right: 0.3rem;
-        }
-
-        .toggle-icon span:not(:last-child) {
-          margin-bottom: 0.2rem;
-        }
-
-        .toggle-icon span {
-          display: block;
-          width: 1rem;
-          height: 0.125rem;
-          background-color: #66727d;
-          transition: all 2500ms ease;
-        }
-      }
     }
   }
 }
