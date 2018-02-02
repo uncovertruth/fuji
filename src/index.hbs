@@ -2,9 +2,15 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The main content area on the homepage }}
-<main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
+<div class="wrapper">
+  <main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
 
-  {{! The tag below includes the post loop - partials/loop.hbs }}
-  {{> "loop"}}
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
 
-</main>
+  </main>
+  <aside>
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "right-column"}}
+  </aside>
+</div>
