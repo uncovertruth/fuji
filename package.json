@@ -74,7 +74,7 @@
     "lint:ts": "tslint '{src,test}/*.ts'",
     "precommit": "lint-staged",
     "prestart": "npm run build",
-    "start": "concurrently --kill-others 'npm run assets -- -w' 'npm run build -- -w'",
+    "start": "concurrently --kill-others 'npm run assets -- -w' 'webpack -w'",
     "test": "npm run build",
     "webpack": "webpack"
   }
