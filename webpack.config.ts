@@ -27,7 +27,8 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: { minimize: true }
             },
             {
               loader: 'sass-loader'
@@ -40,7 +41,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
+          use: [{ loader: 'css-loader', options: { minimize: true } }]
         })
       }
     ]
