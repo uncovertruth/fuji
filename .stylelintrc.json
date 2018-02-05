@@ -1,7 +1,6 @@
 {
   "extends": "@uncovertruth/stylelint-config",
   "rules": {
-    "no-descending-specificity": null,
-    "unit-whitelist": null
+    "at-rule-no-unknown": ["include", "each", "content"]
   }
 }
