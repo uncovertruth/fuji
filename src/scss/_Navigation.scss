@@ -39,7 +39,7 @@
   &:after {
     content: "MENU";
     font-size: 0.8rem;
-    transition: all 2500ms ease;
+    transition: all 250ms ease;
   }
 }
 
@@ -52,7 +52,7 @@
     width: 1.2rem;
     height: 0.125rem;
     background-color: $color-primary;
-    transition: all 2500ms ease;
+    transition: all 250ms ease;
 
     &:not(:last-child) {
       margin-bottom: 0.2rem;
@@ -69,7 +69,7 @@
   height: 100%;
   opacity: 0.97;
   visibility: hidden;
-  transition: opacity 3500ms, visibility 3500ms, width 3500ms;
+  transition: opacity 350ms, visibility 350ms, width 350ms;
 
   &:before,
   &:after {
@@ -79,7 +79,7 @@
     top: 0;
     width: 50%;
     height: 100%;
-    transition: all 3500ms ease;
+    transition: all 350ms ease;
   }
 
   &:before {
@@ -104,34 +104,34 @@
 
     li {
       animation: fadeInTop 0.5s ease forwards;
-      animation-delay: 3500ms;
+      animation-delay: 350ms;
 
       &:nth-of-type(2) {
-        animation-delay: 4500ms;
+        animation-delay: 450ms;
       }
 
       &:nth-of-type(3) {
-        animation-delay: 5500ms;
+        animation-delay: 550ms;
       }
 
       &:nth-of-type(4) {
-        animation-delay: 6500ms;
+        animation-delay: 650ms;
       }
 
       &:nth-of-type(5) {
-        animation-delay: 7500ms;
+        animation-delay: 750ms;
       }
 
       &:nth-of-type(6) {
-        animation-delay: 8500ms;
+        animation-delay: 850ms;
       }
 
       &:nth-of-type(7) {
-        animation-delay: 9500ms;
+        animation-delay: 950ms;
       }
 
       &:nth-of-type(8) {
-        animation-delay: 105ms;
+        animation-delay: 0.105ms;
       }
     }
   }
@@ -148,7 +148,7 @@
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     text-align: center;
-    margin: 1.5rem 0 0;
+    margin: 1rem 0 0;
   }
 
   li {

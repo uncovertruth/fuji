@@ -73,11 +73,11 @@
           position: relative;
           margin-top: 2rem;
           padding: 0.5rem 0 0.5rem 2rem;
-          font-size: 1.563rem;
+          font-size: 1.3rem;
           line-height: 1.4;
 
           @include medium {
-            font-size: 1.3rem;
+            font-size: 1.563rem;
           }
 
           &::before {
