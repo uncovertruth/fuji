@@ -57,9 +57,9 @@
     eslint-plugin-promise "^3.6.0"
     eslint-plugin-standard "^3.0.1"
 
-"@uncovertruth/stylelint-config@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@uncovertruth/stylelint-config/-/stylelint-config-0.9.0.tgz#6f6e6fcaa4fc3b8503ad745f640c8754809689ce"
+"@uncovertruth/stylelint-config@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@uncovertruth/stylelint-config/-/stylelint-config-0.10.0.tgz#5f445fa6e2e1c9b75d964bf7221eddbf9dd5280e"
   dependencies:
     stylelint-config-standard "^18.0.0"
 
