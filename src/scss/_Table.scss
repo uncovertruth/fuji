@@ -1,21 +1,29 @@
 // Table
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-
 table {
-  width: 100%;
-}
+  margin-top: 2rem;
+  border-top: 0.063rem solid #ccc;
 
-th,
-td {
-  border-bottom: 0.1rem solid $color-border;
-  padding: 1.2rem 1.5rem;
-  text-align: left;
+  td {
+    border-bottom: 0.063rem solid #ccc;
+    padding: 1.563rem 1.25rem;
+    vertical-align: top;
 
-  &:first-child {
-    padding-left: 0;
+    &:first-child {
+      white-space: nowrap;
+    }
   }
 
-  &:last-child {
-    padding-right: 0;
+  @include small {
+    td {
+      display: block;
+      padding: 0.3rem 1rem 1rem;
+
+      &:first-child {
+        border-bottom: none;
+        padding: 1rem 1rem 0.3rem;
+        font-weight: bold;
+      }
+    }
   }
 }

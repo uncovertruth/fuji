@@ -3,81 +3,85 @@
 
 .pagination {
   width: 100%;
-  margin: 0 auto 4rem auto;
+  margin: 2rem auto 2rem auto;
+  position: relative;
+  font-size: 0.938rem;
 
   @include medium {
     max-width: 80rem;
-    margin-bottom: 6rem;
-
-    @include clearfix;
-
-    p {
-      float: left;
-    }
-
-    ul {
-      float: right;
-    }
+    margin: 4rem auto 4rem auto;
   }
 
   .page-number {
-    // display: block
+    display: block;
+    text-align: center;
     color: $color-text-light;
+    padding-top: 0.313rem;
   }
 
   ul {
     margin: 0;
-
-    @include clearfix;
+    width: 100%;
   }
 
   .prev {
-    float: left;
+    left: 0;
   }
 
   .next {
-    float: right;
+    right: 0;
   }
 
   li {
     list-style-type: none;
+    position: absolute;
+    top: 1.875rem;
+    border: 0.063rem solid $color-border;
+    border-radius: 0.188rem;
+    background-color: #fff;
+
+    @include medium {
+      top: 0;
+    }
 
     &:not(:last-child) {
       margin-right: 3rem;
     }
 
-    &.prev:hover:before {
-      left: -1rem;
+    &.prev a:hover:before {
+      left: -0.3rem;
     }
 
-    &.next:hover:after {
-      right: -1rem;
+    &.next a:hover:after {
+      right: -0.3rem;
     }
   }
 
   a {
     color: $color-text;
+    padding: 0.313rem 0.625rem;
+    display: block;
 
     &:hover {
       color: $color-text-light;
     }
   }
 
-  .prev:before,
-  .next:after {
+  .prev a:before,
+  .next a:after {
     position: relative;
     transition: all 0.35s;
   }
 
-  .prev:before {
+  .prev a:before {
     content: "←";
     position: relative;
-    left: -0.5rem;
+    left: 0;
   }
 
-  .next:after {
+  .next a:after {
     content: "→";
     position: relative;
-    right: -0.5rem;
+    right: 0;
   }
 }

@@ -6,17 +6,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4.4rem;
+  height: 2.5rem;
   z-index: 1000;
   text-align: center;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid $color-border;
-  transition: background-color 0.25s ease;
+  border-bottom: 0.063rem solid $color-border;
+  transition: background-color 2500ms ease;
 
   &.active {
     .top {
-      transform: translateY(5px) translateX(0) rotate(-45deg);
+      transform: translateY(0.313em) translateX(0) rotate(-45deg);
     }
 
     .middle {
@@ -24,7 +24,7 @@
     }
 
     .bottom {
-      transform: translateY(-5px) translateX(0) rotate(45deg);
+      transform: translateY(-0.313em) translateX(0) rotate(45deg);
     }
 
     .navigation-toggle:after {
@@ -34,12 +34,12 @@
 }
 
 .navigation-toggle {
-  line-height: 4.4rem;
+  line-height: 2.5rem;
 
   &:after {
     content: "MENU";
-    font-size: 1.6rem;
-    transition: all 0.25s ease;
+    font-size: 0.8rem;
+    transition: all 2500ms ease;
   }
 }
 
@@ -49,13 +49,13 @@
 
   span {
     display: block;
-    width: 1.8rem;
-    height: 2px;
+    width: 1.2rem;
+    height: 0.125rem;
     background-color: $color-primary;
-    transition: all 0.25s ease;
+    transition: all 2500ms ease;
 
     &:not(:last-child) {
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
   }
 }
@@ -69,7 +69,7 @@
   height: 100%;
   opacity: 0.97;
   visibility: hidden;
-  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  transition: opacity 3500ms, visibility 3500ms, width 3500ms;
 
   &:before,
   &:after {
@@ -79,7 +79,7 @@
     top: 0;
     width: 50%;
     height: 100%;
-    transition: all 0.35s ease;
+    transition: all 3500ms ease;
   }
 
   &:before {
@@ -104,34 +104,34 @@
 
     li {
       animation: fadeInTop 0.5s ease forwards;
-      animation-delay: 0.35s;
+      animation-delay: 3500ms;
 
       &:nth-of-type(2) {
-        animation-delay: 0.45s;
+        animation-delay: 4500ms;
       }
 
       &:nth-of-type(3) {
-        animation-delay: 0.55s;
+        animation-delay: 5500ms;
       }
 
       &:nth-of-type(4) {
-        animation-delay: 0.65s;
+        animation-delay: 6500ms;
       }
 
       &:nth-of-type(5) {
-        animation-delay: 0.75s;
+        animation-delay: 7500ms;
       }
 
       &:nth-of-type(6) {
-        animation-delay: 0.85s;
+        animation-delay: 8500ms;
       }
 
       &:nth-of-type(7) {
-        animation-delay: 0.95s;
+        animation-delay: 9500ms;
       }
 
       &:nth-of-type(8) {
-        animation-delay: 0.105s;
+        animation-delay: 105ms;
       }
     }
   }
@@ -139,28 +139,31 @@
 
 .site-navigation {
   position: relative;
-  top: 20%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 950;
 
   ul {
-    font-size: 3.6rem;
+    font-size: 1.5rem;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     text-align: center;
+    margin: 1.5rem 0 0;
   }
 
   li {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     opacity: 0;
     list-style: none;
   }
 
   a {
     display: block;
-    color: $color-text-light;
+    color: $color-accent;
+    font-weight: bold;
 
     &:hover {
-      color: $color-accent;
+      color: $color-text-light;
     }
   }
 }
@@ -217,25 +220,25 @@
 
       top: 0;
       z-index: 0;
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: 400;
       text-align: left;
     }
 
     li {
       float: left;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       opacity: 1;
 
       &:not(:last-child) {
-        margin-right: 4rem;
+        margin-right: 2rem;
       }
     }
 
     a {
       display: inline-block;
-      color: $color-text-light;
-      font-size: 1.4rem;
+      color: $color-accent;
+      font-size: 1rem;
     }
   }
 
