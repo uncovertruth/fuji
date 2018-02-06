@@ -1,11 +1,11 @@
-<ul itemscope itemtype="http://schema.org/BreadcrumbList">
-  <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="top">
-    <a itemprop="item" href="{{@blog.url}}"><span itemprop="name">TOP</span></a>
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li class="breadcrumb__item home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="{{@blog.url}}"><span itemprop="name">HOME</span></a>
     <meta itemprop="position" content="1" />
   </li>
 
-  <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="currentpage">
-    <a itemprop="item" href="{{url}}"><span itemprop="name">{{title}}</span></a>
+  <li class="breadcrumb__item currentpage" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span itemprop="name">{{title}}</span>
     <meta itemprop="position" content="2" />
   </li>
 </ul>

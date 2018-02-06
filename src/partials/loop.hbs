@@ -1,28 +1,32 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-  <article>
-    {{#if feature_image}}
-      <div class="featured-image">
-        <a href="{{url}}" style="background-image: url({{feature_image}})"></a>
-      </div>
-    {{/if}}
-		<div class="article-detail">
-			<ul class="article-tag">
-				<li>{{tags}}</li>
-			</ul>
-			<a href="{{url}}">
-				<header>
-          {{#if featured}}
-				    <h2 class="post-header-featured">{{{title}}}</h2>
-          {{else}}
-            <h2><a href="{{url}}">{{{title}}}</a></h2>
-          {{/if}}
-					<p>{{date format="MMMM DD, YYYY"}}</p>
-				</header>
-				<p class="article-text">{{excerpt characters="140"}}</p>
-			</a>
-		</div>
-	</article>
+<article>
+  {{#if feature_image}}
+  <div class="featured-image">
+    <a href="{{url}}" style="background-image: url({{feature_image}})"></a>
+  </div>
+  {{/if}}
+  <div class="article-detail">
+    <ul class="article-tag">
+      {{#foreach tags}}
+      <li>
+        <a href="{{url}}">{{name}}</a>
+      </li>
+      {{/foreach}}
+    </ul>
+    <a href="{{url}}">
+      <header>
+        {{#if featured}}
+        <h2 class="post-header-featured">{{{title}}}</h2>
+        {{else}}
+        <h2>{{{title}}}</h2>
+        {{/if}}
+        <p>{{date format="MMMM DD, YYYY"}}</p>
+      </header>
+      <p class="article-text">{{excerpt characters="140"}}...</p>
+    </a>
+  </div>
+</article>
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}

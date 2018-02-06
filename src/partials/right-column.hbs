@@ -4,13 +4,14 @@
 		<li><a href="#">link（30）</a></li>
 		<li><a href="#">link</a></li>
 		<li><a href="#">link</a></li>
+		<li><a href="#">link</a></li>
 	</ul>
 </section>
 <section class="aside-newest">
 	<h3>最新の記事</h3>
 	<ul>
-		<li><a href="#">blog title</a></li>
-		<li><a href="#">blog title</a></li>
-		<li><a href="#">blog title</a></li>
+		{{#foreach posts limit="3"}}
+		<li><a href="{{url}}">{{title}}</a></li>
+		{{/foreach}}
 	</ul>
 </section>
