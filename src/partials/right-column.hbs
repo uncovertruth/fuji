@@ -1,18 +1,18 @@
 <section class="aside-category">
-	<h3>カテゴリ</h3>
-	<ul>
-		{{#get "tags" limit="all" include="count.posts" order="count.posts desc" filter="slug:news,slug:cases,slug:events,slug:cases,slug:media"}}
-	    {{#foreach tags}}
-	      <li><a href="/tag/{{slug}}">{{name}}（{{count.posts}}）</a></li>
-	    {{/foreach}}
-		{{/get}}
-	</ul>
+  <h3>カテゴリ</h3>
+  <ul>
+    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" filter="slug:news,slug:cases,slug:events,slug:cases,slug:media"}}
+      {{#foreach tags}}
+        <li><a href="/tag/{{slug}}">{{name}}（{{count.posts}}）</a></li>
+      {{/foreach}}
+    {{/get}}
+  </ul>
 </section>
 <section class="aside-newest">
-	<h3>最新の記事</h3>
-	<ul>
-		{{#foreach posts limit="3"}}
-		<li><a href="{{url}}">{{title}}</a></li>
-		{{/foreach}}
-	</ul>
+  <h3>最新の記事</h3>
+  <ul>
+    {{#foreach posts limit="3"}}
+    <li><a href="{{url}}">{{title}}</a></li>
+    {{/foreach}}
+  </ul>
 </section>
