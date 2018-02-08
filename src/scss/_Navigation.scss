@@ -169,7 +169,7 @@
 }
 
 .nav-current a {
-  color: $color-text;
+  color: $color-text-light;
 }
 
 .no-scroll {
@@ -244,6 +244,6 @@
 
   .nav-current a {
     position: relative;
-    color: $color-text;
+    color: $color-text-light;
   }
 }
