@@ -53,6 +53,10 @@ $color-rss: #f26522;
   box-sizing: border-box;
 
   @include clearfix;
+
+  @include small {
+    margin-top: 2.5rem;
+  }
 }
 
 .wrapper {

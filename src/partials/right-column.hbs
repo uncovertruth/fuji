@@ -1,10 +1,11 @@
 <section class="aside-category">
 	<h3>カテゴリ</h3>
 	<ul>
-		<li><a href="#">link（30）</a></li>
-		<li><a href="#">link</a></li>
-		<li><a href="#">link</a></li>
-		<li><a href="#">link</a></li>
+		{{#get "tags" limit="all" include="count.posts" order="count.posts desc" filter="slug:news,slug:cases,slug:events,slug:cases,slug:media"}}
+	    {{#foreach tags}}
+	      <li><a href="/tag/{{slug}}">{{name}}（{{count.posts}}）</a></li>
+	    {{/foreach}}
+		{{/get}}
 	</ul>
 </section>
 <section class="aside-newest">

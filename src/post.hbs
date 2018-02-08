@@ -50,12 +50,12 @@
       </div>
     </section>
 
-    <section class="related-article">
-      <h4>同一カテゴリの関連記事</h4>
-      <ul>
-        {{#get "posts" filter="tags:{{primary_tag.slug}}" limit="4" as |related|}}
-          {{#foreach related}}
-            {{^has slug=../../slug}}
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related|}}
+      {{#if related}}
+        <section class="related-article">
+          <h4>同一カテゴリの関連記事</h4>
+          <ul>
+            {{#foreach related}}
               <li>
                 <a href="{{url}}">
                   {{#if feature_image}}
@@ -74,12 +74,12 @@
                     <p class="article-text">{{excerpt characters="140"}}...</p>
                   </div>
                 </a>
-              {{/has}}
-            </li>
-          {{/foreach}}
-        {{/get}}
-      </ul>
-    </section>
+              </li>
+            {{/foreach}}
+          </ul>
+        </section>
+      {{/if}}
+    {{/get}}
 
     {{> widget-share}}
     {{> breadcrumb}}

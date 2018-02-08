@@ -3,7 +3,7 @@
 
 blockquote {
   margin: 3rem 0 0;
-  padding: 1rem 0 1rem 3rem;
+  padding: 0.5rem 0 0.5rem 2rem;
   color: $color-text-light;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
@@ -19,8 +19,8 @@ blockquote {
     color: $color-text-light;
     font-size: 1.3rem;
   }
+}
 
-  > p {
-    margin-top: 0;
-  }
+.post-template main article .post-content blockquote p {
+  margin-top: 0;
 }

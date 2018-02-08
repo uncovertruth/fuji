@@ -92,17 +92,21 @@
         }
 
         h3 {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
           line-height: 1.4;
           margin-top: 2rem;
 
           @include medium {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
           }
         }
 
         * + h2 {
           margin-top: 5rem;
+        }
+
+        a {
+          text-decoration: underline;
         }
 
         ul {
