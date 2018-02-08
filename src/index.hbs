@@ -1,6 +1,15 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
+<section class="site-hero">
+  <header class="site-hero-header">
+    <h2 class="site-hero-title">{{@blog.title}}</h2>
+    <p class="site-hero-description">
+      {{@blog.description}}
+    </p>
+  </header>
+</section>
+
 {{! The main content area on the homepage }}
 <div class="wrapper">
   <main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
