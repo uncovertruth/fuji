@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/extract-text-webpack-plugin": "^3.0.0",
-    "@types/node": "^9.4.0",
+    "@types/node": "^9.4.5",
     "@types/webpack": "^3.8.5",
     "@uncovertruth/eslint-config": "^3.4.0",
     "@uncovertruth/stylelint-config": "^0.10.0",
@@ -29,13 +29,13 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "stylelint": "^8.4.0",
-    "ts-loader": "^3.4.0",
+    "ts-loader": "^3.5.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.1",
-    "typescript-eslint-parser": "^12.0.0",
+    "typescript-eslint-parser": "^13.0.0",
     "uglifyjs-webpack-plugin": "^1.1.8",
-    "webpack": "^3.10.0"
+    "webpack": "^3.11.0"
   },
   "homepage": "https://github.com/uncovertruth/fuji#readme",
   "keywords": [
