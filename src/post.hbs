@@ -1,22 +1,29 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-<main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
+<div class="wrapper">
+  <main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
 
-  {{! Everything inside the #post tags pulls data from the post }}
-  {{#post}}
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
 
     <article class="{{post_class}}">
       <header class="post-header">
         <h2>{{title}}</h2>
         <p class="post-meta">
           <time datetime="{{date format='YYYY-MM-DD'}}">Posted on {{date format="MMMM DD, YYYY"}}</time> <br>
-          {{tags prefix="in "}}
+          <ul class="article-tag">
+            {{#foreach tags}}
+            <li>
+              <a href="{{url}}">{{name}}</a>
+            </li>
+            {{/foreach}}
+          </ul>
         </p>
         {{#if feature_image}}
-          <section class="featured-image">
-            <img src="{{feature_image}}" alt="{{title}}">
-          </section>
+        <section class="featured-image">
+          <img src="{{feature_image}}" alt="{{title}}">
+        </section>
         {{/if}}
       </header>
 
@@ -26,32 +33,58 @@
     </article>
 
     <section class="read-next-story">
-      <div class="row">
-
-        <div class="column">
-          {{#next_post}}
-            <div class="next">
-              <p>次の記事</p>
-              <h3><a href="{{url}}">{{title}}</a></h3>
-            </div>
-          {{/next_post}}
+      <div>
+        {{#next_post}}
+        <div class="next">
+          <h3><a href="{{url}}">{{title}}</a></h3>
         </div>
+        {{/next_post}}
+      </div>
 
-        <div class="column">
-          {{#prev_post}}
-            <div class="prev">
-              <p>前の記事</p>
-              <h3><a href="{{url}}">{{title}}</a></h3>
-            </div>
-          {{/prev_post}}
+      <div>
+        {{#prev_post}}
+        <div class="prev">
+          <h3><a href="{{url}}">{{title}}</a></h3>
         </div>
-
+        {{/prev_post}}
       </div>
     </section>
 
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related|}}
+      {{#if related}}
+        <section class="related-article">
+          <h4>同一カテゴリの関連記事</h4>
+          <ul>
+            {{#foreach related}}
+              <li>
+                <a href="{{url}}">
+                  {{#if feature_image}}
+                    <p class="featured-image">
+                      <img src="{{feature_image}}" alt="{{title}}">
+                    </p>
+                  {{/if}}
+                  <ul class="article-tag">
+                    {{#foreach tags}}
+                      <li>{{name}}</li>
+                    {{/foreach}}
+                  </ul>
+                  <div class="article-content">
+                    <time datetime="{{date format='YYYY-MM-DD'}}">Posted on {{date format="MMMM DD, YYYY"}}</time>
+                    <h5>{{title}}</h5>
+                    <p class="article-text">{{excerpt characters="140"}}...</p>
+                  </div>
+                </a>
+              </li>
+            {{/foreach}}
+          </ul>
+        </section>
+      {{/if}}
+    {{/get}}
+
     {{> widget-share}}
+    {{> breadcrumb}}
 
+    {{/post}}
 
-  {{/post}}
-
-</main>
+  </main>
+</div>

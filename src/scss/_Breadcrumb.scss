@@ -1,0 +1,26 @@
+// breadcrumb
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.breadcrumb {
+  margin-top: 4rem;
+  display: flex;
+
+  .home {
+    &::before {
+      content: "\f015";
+      font-family: FontAwesome, sans-serif;
+      margin-right: 0.125rem;
+    }
+  }
+
+  li {
+    font-size: 0.75rem;
+
+    + li {
+      &::before {
+        content: "\f105";
+        font-family: FontAwesome, sans-serif;
+        margin: 0 0.313rem 0 0.626rem;
+      }
+    }
+  }
+}

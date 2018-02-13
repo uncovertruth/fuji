@@ -4,22 +4,51 @@
 // The base font-size is set at 62.5% for having the convenience
 // of sizing rems in a way that is similar to using px. 1.6rem=16px
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  line-height: 1;
+  color: #333;
+  height: 100%;
+  padding: 0;
   margin: 0;
-  color: $color-text;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.6;
 }
 
 // Box Sizing (FTW) inherited from html
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: inherit;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dt,
+dd,
+figure,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+p + p {
+  margin-top: 1rem;
 }

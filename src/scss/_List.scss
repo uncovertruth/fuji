@@ -4,8 +4,8 @@
 dl,
 ol,
 ul {
-  margin-top: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 
   dl,
   ul,
@@ -19,15 +19,14 @@ dl {
 }
 
 ul {
-  list-style: square inside;
+  list-style: none;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: none;
 }
 
 dt,
-dd,
-li {
+dd {
   margin-bottom: 1rem;
 }

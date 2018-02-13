@@ -67,8 +67,9 @@
   },
   "scripts": {
     "assets": "cpx 'src/**/*.{css,hbs,eof,svg,ttf,woff}' dist",
+    "assets:amp": "node-sass src/scss/amp/amp.scss --output-style compressed > amp.css",
     "assets:package": "cpx package.json dist/.",
-    "build": "run-s assets assets:package webpack",
+    "build": "run-s assets assets:package assets:amp webpack",
     "lint": "run-p lint:*",
     "lint:css": "stylelint 'src/**/*.{css,scss}'",
     "lint:ts": "tslint '{src,test}/*.ts'",

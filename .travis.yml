@@ -5,11 +5,9 @@ cache:
   yarn: true
   directories:
   - node_modules
-matrix:
-  allow_failures:
-  - env: CMD=lint
 env:
   matrix:
+  - CMD=build
   - CMD=lint
   - CMD=test
 script:
