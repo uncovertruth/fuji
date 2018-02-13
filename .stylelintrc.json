@@ -1,6 +1,7 @@
 {
   "extends": "@uncovertruth/stylelint-config",
   "rules": {
+    "at-rule-no-unknown": null,
     "selector-pseudo-element-colon-notation": null,
     "unit-whitelist": null
   }
