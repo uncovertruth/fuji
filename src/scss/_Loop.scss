@@ -53,7 +53,9 @@
 
           .article-tag {
             display: flex;
+            flex-wrap: wrap;
             font-size: 0.75rem;
+            line-height: 1.2;
 
             &::before {
               content: "\f02b";
@@ -62,14 +64,18 @@
             }
 
             li {
-              a {
-                color: #555;
+              &::after {
+                content: ",";
+                margin: 0 0.313rem 0 0;
               }
 
-              + li {
-                &::before {
-                  content: ",";
-                  margin: 0 0.313rem 0 0.188rem;
+              &:last-child {
+                &::after {
+                  display: none;
+                }
+
+                a {
+                  color: #555;
                 }
               }
             }
@@ -108,7 +114,7 @@
     }
 
     aside {
-      width: 12.5rem;
+      width: 13.5rem;
       margin-left: 2.5rem;
 
       section {

@@ -11,7 +11,7 @@
       <header class="post-header">
         <h2>{{title}}</h2>
         <p class="post-meta">
-          <time datetime="{{date format='YYYY-MM-DD'}}">Posted on {{date format="MMMM DD, YYYY"}}</time> <br>
+          <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time> <br>
           <ul class="article-tag">
             {{#foreach tags}}
             <li>
@@ -69,9 +69,9 @@
                     {{/foreach}}
                   </ul>
                   <div class="article-content">
-                    <time datetime="{{date format='YYYY-MM-DD'}}">Posted on {{date format="MMMM DD, YYYY"}}</time>
+                    <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
                     <h5>{{title}}</h5>
-                    <p class="article-text">{{excerpt characters="140"}}...</p>
+                    <p class="article-text">{{excerpt characters="88"}}...</p>
                   </div>
                 </a>
               </li>
