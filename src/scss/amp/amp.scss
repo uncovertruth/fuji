@@ -38,7 +38,7 @@ audio:not([controls]) {
 }
 
 [hidden],
-tremplate {
+template {
   display: none;
 }
 
@@ -513,7 +513,7 @@ textarea {
 
 input {
   &[type="text"]:focus,
-  &[type="remail"]:focus,
+  &[type="email"]:focus,
   &[type="search"]:focus,
   &[type="tel"]:focus,
   &[type="url"]:focus,
@@ -872,7 +872,7 @@ select {
   justify-content: center;
 }
 
-.share-itrem {
+.share-item {
   margin-left: 1rem;
 }
 
