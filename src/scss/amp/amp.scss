@@ -403,6 +403,7 @@ table {
   margin: 1.75rem 0;
   max-width: 100%;
   width: 100%;
+  background-color: #fff;
   background-color: transparent;
   -moz-box-sizing: border-box;
 
@@ -442,10 +443,6 @@ table {
 
   tbody + tbody {
     border-top: #efefef 2px solid;
-  }
-
-  table table {
-    background-color: #fff;
   }
 
   tbody > tr:nth-child(odd) >  {
@@ -682,7 +679,7 @@ select {
   margin-top: 2rem;
 
   h4 {
-    fonnt-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   ul {
@@ -724,16 +721,16 @@ select {
   display: flex;
   color: #555;
   font-size: 0.75rem;
+
+  li + li:before {
+    content: ">";
+    margin-left: 0.626rem;
+  }
 }
 
 .article-tag a {
   color: #555;
   text-decoration: underline;
-}
-
-.breadcrumb li + li::before {
-  content: ">";
-  margin-left: 0.626rem;
 }
 
 .post-content {
@@ -751,7 +748,7 @@ select {
     line-height: 1.4;
     position: relative;
 
-    &::before {
+    &:before {
       content: "";
       position: absolute;
       left: 0;
