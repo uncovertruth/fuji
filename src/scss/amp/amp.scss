@@ -3,10 +3,22 @@ html {
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  max-height: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
   margin: 0;
+  max-height: 100%;
+  height: 100%;
+  color: #333;
+  letter-spacing: 0.01rem;
+  line-height: 1.75rem;
+  text-rendering: geometricPrecision;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
 }
 
 article,
@@ -236,24 +248,6 @@ table {
 td,
 th {
   padding: 0;
-}
-
-html {
-  max-height: 100%;
-  height: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-  max-height: 100%;
-  height: 100%;
-  color: #333;
-  letter-spacing: 0.01rem;
-  line-height: 1.75rem;
-  text-rendering: geometricPrecision;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
 }
 
 h1,
