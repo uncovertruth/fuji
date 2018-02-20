@@ -42,13 +42,14 @@
     "@types/tapable" "*"
     "@types/uglify-js" "*"
 
-"@types/webpack@^3.8.5":
-  version "3.8.5"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/@types/webpack-3.8.5.tgz#793a0dc6c49900095313c4f424eda6fb814dd76b"
+"@types/webpack@^3.8.8":
+  version "3.8.8"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.8.tgz#fd9483edf2d6935eaab52aa530b1f737c188cd9a"
   dependencies:
     "@types/node" "*"
     "@types/tapable" "*"
     "@types/uglify-js" "*"
+    source-map "^0.6.0"
 
 "@uncovertruth/eslint-config@^3.4.0":
   version "3.4.0"
