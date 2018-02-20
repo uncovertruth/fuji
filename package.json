@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/extract-text-webpack-plugin": "^3.0.0",
-    "@types/node": "^9.4.5",
+    "@types/node": "^9.4.6",
     "@types/webpack": "^3.8.8",
     "@uncovertruth/eslint-config": "^3.4.0",
     "@uncovertruth/stylelint-config": "^0.10.0",
