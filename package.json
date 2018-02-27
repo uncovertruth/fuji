@@ -7,7 +7,7 @@
     "url": "https://github.com/uncovertruth/fuji/issues"
   },
   "dependencies": {
-    "basscss": "^8.0.3"
+    "basscss": "^8.0.4"
   },
   "devDependencies": {
     "@types/extract-text-webpack-plugin": "^3.0.1",
