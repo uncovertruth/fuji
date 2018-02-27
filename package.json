@@ -19,7 +19,7 @@
     "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.9",
-    "eslint": "^4.18.0",
+    "eslint": "^4.18.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.1",
