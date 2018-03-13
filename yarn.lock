@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@types/extract-text-webpack-plugin@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.1.tgz#47e686ce9913b882abb8ee343ef5eda8df266576"
+"@types/extract-text-webpack-plugin@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#e3eca93086a1cb42e398a4b5ac28cd609f6f2f34"
   dependencies:
     "@types/webpack" "*"
 
