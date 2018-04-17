@@ -30,7 +30,7 @@
     "style-loader": "0.20.3",
     "stylelint": "9.2.0",
     "ts-loader": "3.5.0",
-    "ts-node": "5.0.1",
+    "ts-node": "6.0.0",
     "tslint": "5.9.1",
     "typescript": "2.8.1",
     "typescript-eslint-parser": "14.0.0",
