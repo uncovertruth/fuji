@@ -10,7 +10,7 @@
     "basscss": "8.0.4"
   },
   "devDependencies": {
-    "@types/extract-text-webpack-plugin": "3.0.2",
+    "@types/extract-text-webpack-plugin": "3.0.3",
     "@types/node": "9.6.14",
     "@types/webpack": "3.8.12",
     "@uncovertruth/eslint-config": "4.2.0",
