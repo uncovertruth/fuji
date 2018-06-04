@@ -15,7 +15,7 @@
     "@types/webpack": "3.8.12",
     "@uncovertruth/eslint-config": "4.2.0",
     "@uncovertruth/stylelint-config": "4.3.2",
-    "@uncovertruth/tslint-config": "4.3.1",
+    "@uncovertruth/tslint-config": "4.3.2",
     "concurrently": "3.5.1",
     "cpx": "1.5.0",
     "css-loader": "0.28.11",
