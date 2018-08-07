@@ -25,9 +25,9 @@
   version "9.4.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
 
-"@types/node@9.6.25":
-  version "9.6.25"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.25.tgz#2009ab5432ed1f5e1918f7c6b000bc778549b216"
+"@types/node@9.6.26":
+  version "9.6.26"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.26.tgz#cd9d021f3e43f16a62e1b1cfa38b00ae4cfbebac"
 
 "@types/tapable@*":
   version "0.2.4"
