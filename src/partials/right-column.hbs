@@ -1,7 +1,7 @@
 <section class="aside-category">
   <h3>カテゴリ</h3>
   <ul>
-    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" filter="slug:news,slug:cases,slug:events,slug:analytics,slug:media"}}
+    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" filter="slug:news,slug:cases,slug:events,slug:analytics,slug:media,slug:hr"}}
       {{#foreach tags}}
         <li><a href="/tag/{{slug}}">{{name}}（{{count.posts}}）</a></li>
       {{/foreach}}
