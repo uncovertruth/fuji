@@ -28,7 +28,7 @@
     "prettier-eslint-cli": "5.0.0",
     "sass-loader": "7.3.1",
     "style-loader": "2.0.0",
-    "stylelint": "13.9.0",
+    "stylelint": "13.10.0",
     "ts-loader": "3.5.0",
     "ts-node": "9.1.1",
     "tslint": "5.20.1",
