@@ -260,10 +260,10 @@
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
 
-"@types/extract-text-webpack-plugin@3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.5.tgz#1b65f1913382225bb6f798b2c103175a7065560d"
-  integrity sha512-TH021cSbocn+1rfP3Bw6jJi3vcmgHMcQMSkXseIzwGU95qA1Nu7iEpzkHdpM4rBvxFzdeVuRgv+Nv7Ayx/K4qg==
+"@types/extract-text-webpack-plugin@3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.7.tgz#27a73cdb3b3bc3ae7e3246732a9efa849fc04708"
+  integrity sha512-y1sAp2P5sCfqaUDWS7TSB/xemrHGpw9dsjiLE4lC+7bxDC8024Rzl7EdgDVM6wDpJ26H1tWuHRwxLFz1MD95Uw==
   dependencies:
     "@types/webpack" "^4"
 
